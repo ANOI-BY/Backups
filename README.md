@@ -14,7 +14,7 @@ pip install -r requirements.txt
 then you need to change the config
 
 open the file options.py and change the following lines:
-~~~
+~~~python
 Make_zip = 'on'
 homedir = 'Your backup folder' 
 ~~~
@@ -65,7 +65,7 @@ backup C:\dirname
 ### Use cloud (disks)
 so far I've only added Yandex disk but will soon add Google drive
 configuring backup to Yandex disk
-~~~
+~~~python
 #open options.py
 #change Yandex_disk_switch = 'off'
 
@@ -78,7 +78,7 @@ Yandex_token = 'token'
 Yandex_name_dir = '/download/'
 ~~~
 if you want, you can disable archiving on your computer (only if you have enabled archiving on Yandex Disk)
-~~~
+~~~python
 #change Make_zip = 'on'
 Make_zip = 'off'
 ~~~
