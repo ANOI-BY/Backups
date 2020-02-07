@@ -52,7 +52,7 @@ class backup:
                 elif options.Yandex_disk_switch == 'on':
                     yandex_disk().yandex_upload(yandex_disk().yandex_auth(), name+'.zip')
             elif options.Make_zip == 'off':
-                if options.Yandex_disk_switch == 'on'
+                if options.Yandex_disk_switch == 'on':
                     make_archive(name,"zip",pwd)
                     yandex_disk().yandex_upload(yandex_disk().yandex_auth(), name+'.zip')
                     os.remove(name+'.zip')
