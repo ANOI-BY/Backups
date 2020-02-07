@@ -89,5 +89,5 @@ class google_drive:
 
 if __name__ == '__main__':
     if len(argv) == 1:
-        raise Exception('No arguments')
+        raise Exception('No arguments!')
     backup().commands(argv[1:])
