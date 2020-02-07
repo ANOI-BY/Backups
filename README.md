@@ -9,7 +9,8 @@ Now your files will not be lost!
 ~~~
 git clone https://github.com/ANOI-BY/Backups.git
 cd Backups
-pip install -r requirements.txt
+pip3 install -r requirements.txt # for linux
+pip install -r requirements.txt # for windows
 ~~~
 then you need to change the config
 
