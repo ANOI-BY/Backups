@@ -10,14 +10,27 @@ import time
 import os
 
 class backup:
+
     def commands(self, com):
-        if path.isfile(com[0]) or path.isdir(com[0]):
-            self.backup(com[0])
-        if com[0] == '--create-ya-dir':
-            if options.Yandex_disk_switch == 'on':
-                yandex_disk().yandex_create_dir(yandex_disk().yandex_auth(), com[1])
-            else:
-                raise Exception('Yandex_disk_switch is "off", please change to "on')
+        for i in range(len(com)):
+            if com[i] == '-h' or com[i] == '--help':
+                print(options.helps)
+            elif com[i] == '--check-ya-token':
+                print(yandex_disk().yandex_check(yandex_disk().yandex_auth()))
+            elif com[i] == '--create-ya-dir':
+                if options.Yandex_disk_switch == 'on':
+                    if len(com) < 2:
+                        raise Exception('Enter folder name')
+                    yandex_disk().yandex_create_dir(yandex_disk().yandex_auth(), com[i+1])
+                else:
+                    raise Exception('Yandex_disk_switch is "off", please change to "on')
+            elif com[i] == '--check-valid-dir':
+                if path.isdir(options.homedir):
+                    print('the folder is accessible')
+                else:
+                    print('invalid folder. please change homedir to options.py')
+            elif path.isfile(com[i]) or path.isdir(com[i]):
+                self.backup(com[i])
 
     def backup(self, pwd):
         if options.homedir == '':
@@ -43,6 +56,8 @@ class backup:
                         zipf.write(filename)
                     yandex_disk().yandex_upload(yandex_disk().yandex_auth(), name)
                     os.remove(name)
+                else:
+                    raise Exception('Please enable Make_zip = on or Yandex_disk_switch = on')
 
         if path.isdir(pwd):
             dirpath, dirname = path.split(pwd)
