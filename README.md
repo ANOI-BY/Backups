@@ -64,7 +64,8 @@ backup C:\dirname
 
 ### Use cloud (disks)
 so far I've only added Yandex disk but will soon add Google drive
-configuring backup to Yandex disk
+
+configuring backup to Yandex disk:
 ~~~python
 #open options.py
 #change Yandex_disk_switch = 'off'
