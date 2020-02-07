@@ -22,7 +22,7 @@ homedir = 'Your backup folder'
 now you can run:
 ~~~bash
 python3 backup.py (link on file) # For linux
-python backup.py (link in file) # For windows
+python backup.py (link on file) # For windows
 ~~~
 
 ### Example
