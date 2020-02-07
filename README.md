@@ -61,4 +61,26 @@ now open command line and write:
 ~~~
 backup C:\dirname
 ~~~
+
+### Use disks
+so far I've only added Yandex disk but will soon add Google drive
+configuring backup to Yandex diskЖ
+~~~
+#open options.py
+#change Yandex_disk_switch = 'off'
+
+Yandex_disk_switch = 'on'
+
+#enter yandex disk token
+Yandex_token = 'token'
+
+#and enter the directory on Yandex Disk
+Yandex_name_dir = '/download/'
+~~~
+if you want, you can disable archiving on your computer (only if you have enabled archiving on Yandex Disk)
+~~~
+#change Make_zip = 'on'
+Make_zip = 'off'
+~~~
+
 # PROFIT
