@@ -30,6 +30,19 @@ python backup.py C:/dirname # For windows
 python3 backup.py /home/user/dirname # For linux
 ~~~
 
+### Arguments
+
+help and new types of arguments were added to the app:
+~~~
+python backup.py -h # or --help to open the help
+
+python backup.py --create-ya-dir (folder name) # argument to create a folder on Yandex disk (use only if you specified a Yandex token). use the second argument to specify the folder name.
+
+python backup.py --check-ya-token # to check the Yandex token (use only if you have a token)
+
+python backup.py --check-valid-dir # to check whether a folder is available for backup
+~~~
+
 ### Additionally
 for a quick start, add to alias:
 ~~~
