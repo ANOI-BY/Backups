@@ -27,8 +27,8 @@ python backup.py (link on file) # For windows
 
 ### Example
 ~~~bash
-python backup.py C:/dirname # For windows
-python3 backup.py /home/user/dirname # For linux
+python backup.py -h # For windows
+python3 backup.py -h # For linux
 ~~~
 
 ### Arguments
