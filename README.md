@@ -62,7 +62,7 @@ now open command line and write:
 backup C:\dirname
 ~~~
 
-### Use disks
+### Use cloud (disks)
 so far I've only added Yandex disk but will soon add Google drive
 configuring backup to Yandex diskЖ
 ~~~
