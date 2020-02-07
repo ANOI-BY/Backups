@@ -22,11 +22,13 @@ class backup:
     def backup(self, pwd):
         if options.homedir == '':
             raise Exception('Please enter homedir in options')
-        
         date = time.strftime(options.format_backups)
         if path.isfile(pwd):
-            filepath, filename = path.split(pwd)
-            chdir(filepath)
+            try:
+                filepath, filename = path.split(pwd)
+                chdir(filepath)
+            except OSError:
+                filename = pwd
             name = options.homedir+str(date)+f'-{filename}.zip'
             if options.Make_zip == 'on':
                 with ZipFile(name, 'w') as zipf:
@@ -86,8 +88,7 @@ class google_drive:
        will be soon
        '''
 
-
 if __name__ == '__main__':
     if len(argv) == 1:
-        raise Exception('No arguments!')
+        raise Exception('No arguments')
     backup().commands(argv[1:])
