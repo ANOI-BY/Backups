@@ -2,6 +2,7 @@
  
 ### What is it?
 **this is a backup machine :)**
+
 Now your files will not be lost!
 
 ### How to install?
@@ -11,6 +12,9 @@ cd Backups
 pip install -r requirements.txt
 ~~~
 then you need to change the config
+
+
+
 ~~~
 python3 backup.py (link on file) # For linux
 python backup.py (link in file) # For windows
