@@ -20,13 +20,13 @@ Make_zip = 'on'
 homedir = 'Your backup folder' 
 ~~~
 now you can run:
-~~~
+~~~bash
 python3 backup.py (link on file) # For linux
 python backup.py (link in file) # For windows
 ~~~
 
 ### Example
-~~~
+~~~bash
 python backup.py C:/dirname # For windows
 python3 backup.py /home/user/dirname # For linux
 ~~~
@@ -34,7 +34,7 @@ python3 backup.py /home/user/dirname # For linux
 ### Arguments
 
 help and new types of arguments were added to the app:
-~~~
+~~~bash
 python backup.py -h # or --help to open the help
 
 python backup.py --create-ya-dir (folder name) # argument to create a folder on Yandex disk (use only if you specified a Yandex token). use the second argument to specify the folder name.
@@ -46,7 +46,7 @@ python backup.py --check-valid-dir # to check whether a folder is available for 
 
 ### Additionally
 for a quick start, add to alias:
-~~~
+~~~bash
 #for linux
 cd
 nano .bashrc
@@ -58,7 +58,7 @@ alias backup='python3 /home/user/Backups/backup.py'
 backup /home/user/dirname
 ~~~
 for windows, it is a little more complicated, you need to create a bat file and write the following into it:
-~~~
+~~~bat
 @echo off
 doskey backup=python (link on backups dir) $*
 ~~~
@@ -72,7 +72,7 @@ C:\alias\alias.bat
 ~~~
 Done!
 now open command line and write:
-~~~
+~~~cmd
 backup C:\dirname
 ~~~
 
