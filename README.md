@@ -6,7 +6,7 @@
 Now your files will not be lost!
 
 ### How to install?
-~~~
+~~~bash
 git clone https://github.com/ANOI-BY/Backups.git
 cd Backups
 pip3 install -r requirements.txt # for linux
